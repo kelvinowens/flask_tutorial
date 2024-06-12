@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block title %}Tutorial Home Page{% endblock %} {%
+block content %}
+<h1>Hello Everyone!</h1>
+<p>{{ myValue }}</p>
+<p>{{ myText }}</p>
+<hr />
+<ul>
+  {% for item in myList %} {% if item == 30 %}
+  <li style="color: red">{{ item }}</li>
+  {% elif item == 40 %}
+  <li style="color: green">{{ item }}</li>
+  {% else %}
+  <li>{{ item }}</li>
+  {% endif%} {% endfor %}
+</ul>
+<p>{{ myList }}</p>
+
+<a href=" {{ url_for('test')}} ">Test</a>
+
+{% endblock %}
